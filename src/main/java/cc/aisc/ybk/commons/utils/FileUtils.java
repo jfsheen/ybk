@@ -1,24 +1,19 @@
 package cc.aisc.ybk.commons.utils;
 
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.fileupload.FileUpload;
+import org.apache.commons.io.filefilter.DirectoryFileFilter;
+import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * Created by sjf on 15-11-14.
@@ -116,6 +111,40 @@ public abstract class FileUtils {
         }
     }
 
+    public static String uploadToServer(InputStream inputStream, String originalName, String targetFilePath) throws IOException{
+        return saveFile(inputStream, originalName, targetFilePath);
+    }
+    /**保存文件
+     *
+     */
+    public static String saveFile(InputStream inputStream, String originalName, String targetFilePath) throws IOException{
+
+        BufferedInputStream inBuff = new BufferedInputStream(inputStream);
+        File file = createFile(targetFilePath);
+        FileOutputStream outputStream = new FileOutputStream(file);
+        BufferedOutputStream outBuff = new BufferedOutputStream(outputStream);
+
+        byte[] b = new byte[1024 * 32];
+        int len;
+        while ((len = inBuff.read(b)) != -1) {
+            outBuff.write(b, 0, len);
+            // 刷新此缓冲的输出流
+            outBuff.flush();
+        }
+
+        outBuff.close();
+        outputStream.close();
+        inBuff.close();
+        inputStream.close();
+
+        return file.getCanonicalPath();
+    }
+    public static String saveFile(MultipartFile sourceFile, String targetFilePath) throws IOException{
+        return saveFile(sourceFile.getInputStream(), sourceFile.getOriginalFilename(), targetFilePath);
+    }
+    public static String saveFile(File sourceFile, String targetFilePath) throws IOException{
+        return saveFile(new FileInputStream(sourceFile), sourceFile.getName(), targetFilePath);
+    }
     /**
      * 复制文件
      *
@@ -183,7 +212,7 @@ public abstract class FileUtils {
      *
      * * @param dirPath
      */
-    public static void createDirectory(String dirPath){
+    public static void createDir(String dirPath){
         File file = new File(dirPath);
         if(!file.exists()){
             file.mkdirs();
@@ -276,4 +305,24 @@ public abstract class FileUtils {
         }
     }
 
+    public static File createFile(String path) {
+        File file = null;
+        if (!path.isEmpty()) {
+            try {
+                String dirPath = path.substring(0, path.lastIndexOf("/") + 1);
+                File dir = new File(dirPath);
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
+                file = new File(path);
+                if (!file.exists()) {
+                    file.createNewFile();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+    return file;
+    }
 }

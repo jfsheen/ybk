@@ -11,7 +11,7 @@ public class Constant {
     public static final String[] JSONCONFIG_EXCLUDES = {"updatedAt", "createdAt", "createdBy", "updatedBy", "version", "level","parent"};
     public static String webRoot = "";
 
-    public static final String uploadedFilePath = "/resources/static/UploadFiles";
+    public static final String UPLOAD_IMAGES_PATH = "upload/images/";
     public static final String mappingFilePath = "/resources/static/DataMapping";
 
     public static final Integer MAX_NUM_OF_EMPTY_ROWS = 5;
@@ -45,7 +45,10 @@ public class Constant {
     public static final int CAPTCHA_MARGIN_LEFT = 10;
     public static final int CAPTCHA_MARGIN_RIGHT = 10;
 
-
+    public static final String DEFAULT_DATASOURCE_NAME = "ds1";
+    public static final String DEFAULT_DATASOURCE_TYPE = "com.alibaba.druid.pool.DruidDataSource";
+    public static final String MASTER_DATASOURCE_PREFIX = "master.datasource.";
+    public static final String SLAVE_DATASOURCE_PREFIX = "slave.datasource.";
     /*seek*/
     public static final int SEEK_PAGINATION_PAGESIZE = 8;
 }

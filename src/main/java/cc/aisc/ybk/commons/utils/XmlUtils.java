@@ -1,6 +1,6 @@
 package cc.aisc.ybk.commons.utils;
 
-import java.io.IOException;
+/*import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 
@@ -8,7 +8,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
-import org.dom4j.io.XMLWriter;
+import org.dom4j.io.XMLWriter;*/
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +19,7 @@ public abstract class XmlUtils {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(XmlUtils.class);
 
-    public static String formatXML(String inputXML) {
+    /*public static String formatXML(String inputXML) {
 
         LOGGER.debug("format XML. ");
 
@@ -55,6 +55,6 @@ public abstract class XmlUtils {
         }
 
         return requestXML;
-    }
+    }*/
 
 }
