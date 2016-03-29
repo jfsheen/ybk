@@ -1,4 +1,4 @@
-package cc.aisc.ybk.config.mybatis;
+package cc.aisc.ybk.config;
 
 import cc.aisc.ybk.commons.costant.Constant;
 import cc.aisc.ybk.config.mybatis.datasource.DynamicDataSource;
@@ -28,7 +28,6 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
-import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
@@ -42,9 +41,9 @@ import java.util.Properties;
 @PropertySource("classpath:application.properties")
 @EnableTransactionManagement
 @MapperScan(basePackages = {"cc.aisc.ybk.content.mybatis.dao"}, sqlSessionFactoryRef = "sqlSessionFactory")
-public class AppConfig implements TransactionManagementConfigurer {
+public class DataSourceConfig implements TransactionManagementConfigurer {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(AppConfig.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DataSourceConfig.class);
 
     @Autowired
     private Environment env;

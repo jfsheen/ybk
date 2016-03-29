@@ -179,7 +179,7 @@
 	position: relative;
 }
 
-/*Navbar Menu*/
+/*Navbar Menu1*/
 @media (min-width: 992px) {
 	.header-v1 .navbar-default .navbar-nav {
 		margin-top: -6px;
@@ -248,7 +248,7 @@
 		float: none !important;
 	}
 
-	/*Dropdown Menu Slide Down Effect*/
+	/*Dropdown Menu1 Slide Down Effect*/
 	.header-v1 .navbar-nav .open .dropdown-menu {
 		border: 0;
 		float: none;
@@ -390,7 +390,7 @@
         color: #72c02c;
     }
 
-	/*Dropdown Menu*/
+	/*Dropdown Menu1*/
 	.header-v1 .dropdown-menu { 
 		padding: 0;
 		border: none;
@@ -610,10 +610,10 @@
 
 
 /*--------------------------------------------------
-    [6. Header - Mega Menu]
+    [6. Header - Mega Menu1]
 ----------------------------------------------------*/
 
-/*Mega Menu
+/*Mega Menu1
 ------------------------------------*/
 .header-v1 .mega-menu .nav,
 .header-v1 .mega-menu .dropup,
@@ -696,7 +696,7 @@
 	}
 }
 
-/*Mega Menu Style Effect*/
+/*Mega Menu1 Style Effect*/
 .header-v1 .mega-menu .equal-height-list h3 {
 	font-size: 15px;
 	padding: 0 10px;
@@ -711,7 +711,7 @@
 	}
 }
 
-/*Mega Menu Content*/
+/*Mega Menu1 Content*/
 @media (min-width: 992px) {
     .header-v1 .mega-menu .equal-height-in {
         padding: 20px 0;

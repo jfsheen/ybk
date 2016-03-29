@@ -8,6 +8,7 @@ import cc.aisc.ybk.content.model.Menu;
 import cc.aisc.ybk.content.model.WebContent;
 import cc.aisc.ybk.content.service.MenuService;
 import cc.aisc.ybk.content.service.WebContentService;
+import cc.aisc.ybk.content.vo.MenuTree;
 import com.github.pagehelper.PageHelper;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
@@ -18,7 +19,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
 /**
@@ -36,18 +36,20 @@ public class AjaxController {
     private MenuService menuService;
 
     @RequestMapping(value = "/1000", method = {RequestMethod.POST})
-    public Menu fetchMenu(@ModelAttribute Integer root){
-        Menu menu = null;
+    public List<Object> fetchMenu(){
+        MenuTree menuTree = new MenuTree();
         try{
-            menu = menuService.fetchMenuTreeData(root ).get();
+            List<Menu> menuList = menuService.findAll().get();
+            menuTree.listMenuMap(menuList);
         }catch (NoSuchElementException e){
-            LOGGER.info("No menu exists by root id = {}.", root.toString());
+            LOGGER.info("No menu exists!");
+            return null;
         }
-        return menu;
+        return menuTree.list;
     }
 
     @RequestMapping(value = "/1001", method = {RequestMethod.POST})
-    public String uploadFile(HttpServletRequest request, HttpServletResponse response) throws Exception{
+    public String uploadFile(HttpServletRequest request) throws Exception{
         String path = new StringBuilder(request.getSession().getServletContext().getRealPath("/"))
                 .append(Constant.UPLOAD_IMAGES_PATH).toString();
         String fpath = "";
@@ -77,7 +79,7 @@ public class AjaxController {
         webContent.setPostAt(new Date());
         webContent.setTitle("");
         webContent.setOutline("");
-        webContent.setPostByUserId(1);
+        webContent.setPostBy(1);
         int rows = webContentService.create(webContent);
         LOGGER.debug(" [{}] row(s) inserted, ID = [{}] ", rows, webContent.getId());
         LOGGER.debug("{}", HtmlUtils.getStringToHTML(webContent.getContent()));

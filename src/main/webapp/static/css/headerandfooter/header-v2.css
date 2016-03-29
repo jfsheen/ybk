@@ -281,7 +281,7 @@ topbar including in mobile version*/
 	position: relative;
 }
 
-/*Navbar Menu*/
+/*Navbar Menu1*/
 .header-v2 .navbar-default .navbar-nav > li > a {
 	color: #fff;
 	font-size: 15px;
@@ -344,7 +344,7 @@ topbar including in mobile version*/
 		float: none !important;
 	}
 
-	/*Dropdown Menu Slide Down Effect*/
+	/*Dropdown Menu1 Slide Down Effect*/
 	.header-v2 .navbar-nav .open .dropdown-menu {
 		border: 0;
 		float: none;
@@ -480,7 +480,7 @@ topbar including in mobile version*/
 		color: #fff;
 	}
 
-	/*Dropdown Menu*/
+	/*Dropdown Menu1*/
 	.header-v2 .dropdown-menu { 
 		padding: 0;
 		border: none;
@@ -608,10 +608,10 @@ topbar including in mobile version*/
 
 
 /*--------------------------------------------------
-    [5. Header - Mega Menu]
+    [5. Header - Mega Menu1]
 ----------------------------------------------------*/
 
-/*Mega Menu
+/*Mega Menu1
 ------------------------------------*/
 .header-v2 .mega-menu .nav,
 .header-v2 .mega-menu .dropup,
@@ -694,7 +694,7 @@ topbar including in mobile version*/
 	}
 }
 
-/*Mega Menu Style Effect*/
+/*Mega Menu1 Style Effect*/
 .header-v2 .mega-menu .equal-height-list h3 {
 	font-size: 15px;
 	font-weight: 400;
@@ -709,7 +709,7 @@ topbar including in mobile version*/
 	}
 }
 
-/*Mega Menu Content*/
+/*Mega Menu1 Content*/
 @media (min-width: 992px) {
     .header-v2 .mega-menu .equal-height-in {
         padding: 20px 0;

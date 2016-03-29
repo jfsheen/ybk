@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -26,7 +27,8 @@ public class MenuServiceImpl implements MenuService{
         return Optional.ofNullable(menuMapper.selectByPrimaryKey(id));
     }
 
-    public Optional<Menu> fetchMenuTreeData(Integer id){
-        return Optional.ofNullable(menuMapper.treeData(id));
+    @Override
+    public Optional<List<Menu>> findAll() {
+        return Optional.ofNullable(menuMapper.selectAllValid());
     }
 }

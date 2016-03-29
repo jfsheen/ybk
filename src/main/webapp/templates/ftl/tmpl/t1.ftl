@@ -1,4 +1,7 @@
+<#-- @ftlvariable name="m" type="cc.aisc.ybk.content.model.Menu" -->
 <#assign basePath="${request.getContextPath()}">
+<#include "header.ftl" />
+<#include "footer.ftl" />
 <#macro htmlHead title charset="utf-8" lang="zh-CN">
     <#import "/spring.ftl" as spring>
 <!DOCTYPE html>
@@ -16,7 +19,7 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="${basePath}/img/favicon.ico">
 
     <!-- Web Fonts -->
     <link rel='stylesheet' type='text/css' href="${basePath}/static/fonts/fonts.css">
@@ -30,24 +33,45 @@
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="${basePath}/static/css/font-awesome/css/font-awesome.min.css">
     <!-- CSS Theme -->
-
+    <link rel="stylesheet" href="${basePath}/static/css/home_3col.css">
     <!-- CSS Customization -->
     <link rel="stylesheet" href="${basePath}/static/css/common.css">
+    <link rel="stylesheet" href="${basePath}/static/css/style.css">
     <!-- page custom head-->
 
     <#nested>
 </head>
 </#macro>
 <#macro htmlBody project charset="utf-8" lang="zh-CN">
-<body>
+<body onload="initMenu()">
 <div class="wrapper">
-    <#include "header.ftl" />
-    <#nested>
-</div>
-    <#include "footer.ftl" />
+    <@header>
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+            <div id="custommenu" class="container">
+                <ul class='nav navbar-nav'>
+                </ul>
+            </div>
+        </div>
+    </@header>
+    <!--=== Breadcrumbs v1 ===-->
+    <div class="breadcrumbs-v1">
+        <div class="container">
+            <span>Blog Page</span>
+            <h1>Basic Medium Posts</h1>
+        </div>
+    </div>
+    <!--=== End Breadcrumbs v1 ===-->
+<#--    <div class="container content-md">
+        <div class="row">-->
+            <#nested>
+<#--        </div>
+    </div>-->
+    <@footer>
+    </@footer>
 </#macro>
 <#macro htmlFoot charset="utf-8" lang="zh-CN">
     <#nested>
+</div>
 </body>
 </html>
 </#macro>

@@ -115,7 +115,7 @@
     }
 }
 
-/* Navbar Menu
+/* Navbar Menu1
 ------------------------------------*/
 .header-v7 .navbar-default .navbar-nav > li > a {
     color: #555;
@@ -145,7 +145,7 @@
     color: #72c02c !important;
 }
 
-/* Dropdown Menu
+/* Dropdown Menu1
 ------------------------------------*/
 .header-v7 .dropdown-menu li a {
     color: #666;
@@ -211,7 +211,7 @@
         background: inherit;
     }
 
-    /*Dropdown Menu Slide Down Effect*/
+    /*Dropdown Menu1 Slide Down Effect*/
     .header-v7 .navbar-nav .open .dropdown-menu {
         border: 0;
         float: none;
@@ -334,7 +334,7 @@
         margin-right: 0;
     }
 
-    /*Dropdown Menu*/
+    /*Dropdown Menu1*/
     .header-v7 .dropdown-menu {
         top: 100%;
         left: auto;

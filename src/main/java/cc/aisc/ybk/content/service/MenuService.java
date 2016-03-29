@@ -2,6 +2,7 @@ package cc.aisc.ybk.content.service;
 
 import cc.aisc.ybk.content.model.Menu;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -10,5 +11,5 @@ import java.util.Optional;
 public interface MenuService {
     void insert(Menu menu);
     Optional<Menu> findById(Integer id);
-    Optional<Menu> fetchMenuTreeData(Integer id);
+    Optional<List<Menu>> findAll();
 }

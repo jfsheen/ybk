@@ -5,14 +5,16 @@
 <@htmlBody project="PT">
 <!--=== start Content Part ===-->
 <div class="content container">
-    <div id="details">
-        <#if details??>
-            <h1>${details.title?default("THIS IS THE TITLE")}</h1>
-            <h3>${details.subtitle?default("this is the subtitle")}</h3>
-            <h5>${(details.postAt?string("yyyy-MM-dd"))!}  By ${details.postByUserId?default("poster")}</h5>
-            <p>${details.outline?default("outline")}</p>
-            <div>${details.content?default("CONTENT")}</div>
-        </#if>
+    <div class="row">
+        <div id="details">
+            <#if details??>
+                <h1>${details.title?default("THIS IS THE TITLE")}</h1>
+                <h3>${details.subtitle?default("this is the subtitle")}</h3>
+                <h5>${(details.postAt?string("yyyy-MM-dd"))!}  By ${details.postBy?default("poster")}</h5>
+                <p>${details.outline?default("outline")}</p>
+                <div>${details.content?default("CONTENT")}</div>
+            </#if>
+        </div>
     </div>
 </div>
 <!--=== End Content Part ===-->

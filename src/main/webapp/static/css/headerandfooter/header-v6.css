@@ -166,7 +166,7 @@
 	position: relative;
 }
 
-/*Navbar Menu*/
+/*Navbar Menu1*/
 .header-v6 .navbar-nav > li > a {
 	color: #fff;
 	font-size: 13px;
@@ -192,10 +192,10 @@
 
 
 /*--------------------------------------------------
-	[2. Header - Menu Inner Right Style]
+	[2. Header - Menu1 Inner Right Style]
 ----------------------------------------------------*/
 
-/*Menu Inner Right
+/*Menu1 Inner Right
 ------------------------------------*/
 .header-v6 .header-inner-right {
 	float: right;
@@ -416,7 +416,7 @@
 		float: none !important;
 	}
 
-	/*Dropdown Menu Slide Down Effect*/
+	/*Dropdown Menu1 Slide Down Effect*/
 	.header-v6 .navbar-nav .open .dropdown-menu {
 		border: 0;
 		float: none;
@@ -560,7 +560,7 @@
 		color: #fff;
 	}
 
-	/*Dropdown Menu*/
+	/*Dropdown Menu1*/
 	.header-v6 .dropdown-menu { 
 		border: none;
 		padding: 15px 0;
@@ -676,10 +676,10 @@
 
 
 /*--------------------------------------------------
-	[5. Header - Mega Menu]
+	[5. Header - Mega Menu1]
 ----------------------------------------------------*/
 
-/*Mega Menu
+/*Mega Menu1
 ------------------------------------*/
 .header-v6 .mega-menu .nav,
 .header-v6 .mega-menu .dropup,
@@ -762,7 +762,7 @@
 	}
 }
 
-/*Mega Menu Style Effect*/
+/*Mega Menu1 Style Effect*/
 .header-v6 .mega-menu .equal-height-list h3 {
 	color: #555;
 	font-size: 15px;
@@ -778,7 +778,7 @@
 	}
 }
 
-/*Mega Menu Content*/
+/*Mega Menu1 Content*/
 @media (min-width: 992px) {
     .header-v6 .mega-menu .equal-height-in {
         padding: 20px 0;
@@ -952,7 +952,7 @@
 		display: inherit;
 	}
 
-	/*Menu Inner Right*/
+	/*Menu1 Inner Right*/
 	.header-fixed .header-v6.header-fixed-shrink li.menu-icons i.menu-icons-style {
 		color: #555;
 	}
@@ -979,7 +979,7 @@
 		line-height: 30px;
 	}
 
-	/*Menu Icons*/	
+	/*Menu1 Icons*/
 	.header-fixed .header-v6.header-fixed-shrink li.menu-icons i.menu-icons-style {
 		line-height: 70px;
 	}
@@ -1019,7 +1019,7 @@
 		/*margin-right: 20px;*/
 	}
 
-	/*Menu Icons*/
+	/*Menu1 Icons*/
 	.header-v6 li.menu-icons i.menu-icons-style {
 		color: #555;
 	}
@@ -1315,7 +1315,7 @@
 		background: #fff;
 	}
 
-	/*Menu Inner Right*/
+	/*Menu1 Inner Right*/
 	.header-v6.header-dark-res-nav li.menu-icons i.menu-icons-style {
 		color: #fff;
 	}
@@ -1386,7 +1386,7 @@
 		color: #fff !important;
 	}
 
-	/*Mega Menu*/
+	/*Mega Menu1*/
 	.header-v6.header-dark-res-nav .mega-menu .equal-height-list h3 {
 		color: #fff;
 	}
@@ -1424,7 +1424,7 @@
 		display: inherit;
 	}
 
-	/*Menu Inner Right*/
+	/*Menu1 Inner Right*/
 	.header-fixed .header-v6.header-classic-white li.menu-icons i.menu-icons-style {
 		color: #555;
 	}

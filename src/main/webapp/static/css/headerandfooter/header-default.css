@@ -227,7 +227,7 @@ body.header-fixed-space-default {
 	}
 }
 
-/*Navbar Menu*/
+/*Navbar Menu1*/
 .header .navbar-nav > li > a {
 	color: #687074;
 	font-size: 15px;
@@ -288,7 +288,7 @@ body.header-fixed-space-default {
 		float: none !important;
 	}
 
-	/*Dropdown Menu Slide Down Effect*/
+	/*Dropdown Menu1 Slide Down Effect*/
 	.header .navbar-nav .open .dropdown-menu {
 		border: 0;
 		float: none;
@@ -434,7 +434,7 @@ body.header-fixed-space-default {
         color: #72c02c;
     }
 
-	/*Dropdown Menu*/
+	/*Dropdown Menu1*/
 	.header .dropdown-menu {
 		padding: 0;
 		border: none;
@@ -653,10 +653,10 @@ body.header-fixed-space-default {
 
 
 /*--------------------------------------------------
-    [6. Header - Mega Menu]
+    [6. Header - Mega Menu1]
 ----------------------------------------------------*/
 
-/*Mega Menu
+/*Mega Menu1
 ------------------------------------*/
 .header .mega-menu .nav,
 .header .mega-menu .dropup,
@@ -714,24 +714,24 @@ body.header-fixed-space-default {
 }
 
 @media (min-width: 992px) {
-	/*Mega Menu for Two Columns*/
+	/*Mega Menu1 for Two Columns*/
 	.header .mega-menu .mega-menu-content.content-two-col {
 	    min-width: 596px;
 	}
 
-	/*Mega Menu for Three Columns*/
+	/*Mega Menu1 for Three Columns*/
 	.header .mega-menu .mega-menu-content.content-three-col {
 	    min-width: 864px;
 	}
 }
 
-/*Mega Menu Dropdown OPENS from LEFT Side*/
+/*Mega Menu1 Dropdown OPENS from LEFT Side*/
 .header .mega-menu .dropdown.mega-menu-left .dropdown-menu {
 	left: auto;
 	overflow: hidden;
 }
 
-/*Mega Menu Dropdown OPENS from RIGHT Side*/
+/*Mega Menu1 Dropdown OPENS from RIGHT Side*/
 .header .mega-menu .dropdown.mega-menu-right .dropdown-menu,
 .header .mega-menu .dropdown.mega-menu-two-col-right .dropdown-menu {
 	right: 0;
@@ -753,7 +753,7 @@ body.header-fixed-space-default {
 	}
 }
 
-/*Mega Menu Style Effect*/
+/*Mega Menu1 Style Effect*/
 .header .mega-menu .equal-height-list h3 {
 	font-size: 15px;
 	font-weight: 400;
@@ -768,7 +768,7 @@ body.header-fixed-space-default {
 	}
 }
 
-/*Mega Menu Content*/
+/*Mega Menu1 Content*/
 @media (min-width: 992px) {
     .header .mega-menu .equal-height-in {
         padding: 20px 0;
@@ -979,7 +979,7 @@ body.header-fixed-space-default {
 	box-shadow: 0 0 2px #555;
 }
 
-/*Mega Menu*/
+/*Mega Menu1*/
 .header.header-dark .mega-menu .equal-height-list h3 {
 	color: #eee;
 }

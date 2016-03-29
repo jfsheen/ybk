@@ -1,6 +1,5 @@
 package cc.aisc.ybk;
 
-import cc.aisc.ybk.content.model.Menu;
 import cc.aisc.ybk.content.model.User;
 import cc.aisc.ybk.content.service.MenuService;
 import cc.aisc.ybk.content.service.UserService;
@@ -12,9 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = YbkApplication.class)

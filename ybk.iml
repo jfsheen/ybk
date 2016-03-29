@@ -7,6 +7,10 @@
           <file>file://$MODULE_DIR$/src/main/java/cc/aisc/ybk/config/mybatis/MyBatisConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/cc/aisc/ybk/config/mybatis/MyBatisMapperScannerConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/cc/aisc/ybk/YbkApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/cc/aisc/ybk/config/AppConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/cc/aisc/ybk/config/AppConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/cc/aisc/ybk/config/RedisConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/cc/aisc/ybk/config/RedisConfig.java</file>
         </fileset>
       </configuration>
     </facet>

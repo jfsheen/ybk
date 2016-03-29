@@ -1,8 +1,5 @@
 package cc.aisc.ybk.web.controller;
 
-import cc.aisc.ybk.commons.utils.HtmlUtils;
-import cc.aisc.ybk.content.model.Menu;
-import cc.aisc.ybk.content.model.User;
 import cc.aisc.ybk.content.model.WebContent;
 import cc.aisc.ybk.content.service.MenuService;
 import cc.aisc.ybk.content.service.UserService;
@@ -35,8 +32,18 @@ public class ViewController {
     private MenuService menuService;
 
     @RequestMapping("/")
-    public Menu home() {
-       return null;
+    public ModelAndView home() {
+        /*MenuTree menuTree = new MenuTree();
+        try{
+            //menu = menuService.fetchMenuTreeData(1).get();
+            List<Menu1> menuList = menuService.findAll().get();
+            menuTree.listMenuMap(menuList);
+        }catch (NoSuchElementException e){
+            LOGGER.info("No menu exists by root id = 1.");
+            return new ModelAndView("home", "message", "no menu exists!");
+        }
+        return new ModelAndView("home", "menus", menuTree.list);*/
+        return new ModelAndView("home");
     }
 
     @RequestMapping("/a")

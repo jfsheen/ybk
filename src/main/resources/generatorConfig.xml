@@ -48,7 +48,7 @@
         <javaModelGenerator targetPackage="cc.aisc.ybk.content.model" targetProject="src/main/java">
             <property name="constructorBased" value="true"/>
             <property name="enableSubPackages" value="true"/>
-            <property name="immutable" value="true"/>
+            <property name="immutable" value="true"/><!--没有setter函数-->
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
