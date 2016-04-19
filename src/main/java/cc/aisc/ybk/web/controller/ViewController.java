@@ -1,9 +1,11 @@
 package cc.aisc.ybk.web.controller;
 
+import cc.aisc.ybk.content.model.Menu;
 import cc.aisc.ybk.content.model.WebContent;
 import cc.aisc.ybk.content.service.MenuService;
 import cc.aisc.ybk.content.service.UserService;
 import cc.aisc.ybk.content.service.WebContentService;
+import cc.aisc.ybk.content.vo.MenuTree;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 /**
@@ -33,17 +36,16 @@ public class ViewController {
 
     @RequestMapping("/")
     public ModelAndView home() {
-        /*MenuTree menuTree = new MenuTree();
+        MenuTree menuTree = new MenuTree();
         try{
             //menu = menuService.fetchMenuTreeData(1).get();
-            List<Menu1> menuList = menuService.findAll().get();
+            List<Menu> menuList = menuService.findAll().get();
             menuTree.listMenuMap(menuList);
         }catch (NoSuchElementException e){
             LOGGER.info("No menu exists by root id = 1.");
             return new ModelAndView("home", "message", "no menu exists!");
         }
-        return new ModelAndView("home", "menus", menuTree.list);*/
-        return new ModelAndView("home");
+        return new ModelAndView("home", "menus", menuTree.list);
     }
 
     @RequestMapping("/a")

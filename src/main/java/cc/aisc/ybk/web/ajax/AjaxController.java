@@ -14,6 +14,7 @@ import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -87,14 +88,15 @@ public class AjaxController {
         return String.valueOf(rows);
     }
 
-    @RequestMapping("/1003/{p}")
-    public Map<String, Object> fetchContents(@PathVariable Integer p){
-        PageHelper.startPage(p, 8);
-        List<WebContent> webContents = new ArrayList<>();
+    @RequestMapping("/1003")
+    @Cacheable(value = "simpleWebContentListCache", keyGenerator = "redisKeyGenerator")
+    public Map<String, Object> fetchContents(@RequestParam Integer toPage, @RequestParam Integer pageSize){
+        PageHelper.startPage(toPage, pageSize);
+        List<WebContent> webContents = null;
         Map<String, Object> map = new HashMap<>();
         try {
-            webContents = webContentService.findSimpleList().get();
-            Integer rows = webContentService.count();
+            webContents = webContentService.findSimpleList("NEWS").get();
+            Integer rows = webContentService.count("NEWS");
             map.put("data", webContents);
             map.put("totalRows", rows.toString());
         }catch (NoSuchElementException e){

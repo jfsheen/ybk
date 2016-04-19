@@ -185,7 +185,7 @@
 
                     $.ajax({
                         type: "POST",
-                        url: this.config.ajaxData.url+this.config.toPage,
+                        url: this.config.ajaxData.url,
                         data: this.config.ajaxData.params,
                         dataType:"json",
                         success: function(result){

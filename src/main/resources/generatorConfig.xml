@@ -68,7 +68,7 @@
                enableSelectByExample="false" selectByExampleQueryId="false">
             <generatedKey column="id" sqlStatement="Mysql" identity="true" /></table>
 
-        <!--<table tableName="t_ybk_user" domainObjectName="User" enableCountByExample="false"
+        <table tableName="t_ybk_user" domainObjectName="User" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">
             <generatedKey column="id" sqlStatement="Mysql" identity="true" /></table>
@@ -124,7 +124,7 @@
         <table tableName="t_ybk_web_content" domainObjectName="WebContent" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true" /></table>-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true" /></table>
 
         <!--<table tableName="t_ybk_*" domainObjectName="User" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"

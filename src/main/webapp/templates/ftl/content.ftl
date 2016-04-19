@@ -18,9 +18,10 @@
 <script type="text/javascript" src="${basePath}/static/jquery/jquery-ffpagination/jquery.ffpage.js"></script>
 <script>
     function listPage(){
-
         $("#pageContent").xyPaginate({
-            ajaxData:{url:"/ajax/1003/"}
+            ajaxData:{url:"/ajax/1003"},
+            toPage:1,
+            pageSize:5
         });
     }
     $(document).ready(function() {

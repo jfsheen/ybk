@@ -40,13 +40,13 @@ public class WebContentServiceImpl implements WebContentService {
 
     @Override
     @TargetDataSource("ds1")
-    public Optional<List<WebContent>> findSimpleList() {
-        return Optional.ofNullable(webContentMapper.selectAllSimple());
+    public Optional<List<WebContent>> findSimpleList(String type) {
+        return Optional.ofNullable(webContentMapper.simpleSelectAllByType(type));
     }
 
     @Override
-    public int count() {
-        return webContentMapper.count();
+    public int count(String type) {
+        return webContentMapper.countByType(type);
     }
 
     @Override

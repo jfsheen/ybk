@@ -29,6 +29,6 @@ public class MenuServiceImpl implements MenuService{
 
     @Override
     public Optional<List<Menu>> findAll() {
-        return Optional.ofNullable(menuMapper.selectAllValid());
+        return Optional.ofNullable(menuMapper.getValid());
     }
 }

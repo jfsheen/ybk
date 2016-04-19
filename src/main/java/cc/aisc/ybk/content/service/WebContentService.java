@@ -12,7 +12,7 @@ public interface WebContentService {
     int create(WebContent webContent);
     int delete(WebContent webContent);
     void modify(WebContent webContent);
-    Optional<List<WebContent>> findSimpleList();
-    int count();
+    Optional<List<WebContent>> findSimpleList(String type);
+    int count(String type);
     Optional<WebContent> findById(Integer id);
 }
